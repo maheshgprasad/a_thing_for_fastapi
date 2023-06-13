@@ -6,6 +6,7 @@
 ```
 # To create a python virtual environment
 python -m virtualenv ./path/to/your/environment/
+
 # Navigate to your virtual environment directory
 cd ./path/to/your/environment/
 
