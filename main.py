@@ -1,12 +1,3 @@
-from fastapi import FastAPI
+from app.main import app
 
-import chatbot as cb
-
-app = FastAPI()
-
-
-@app.get("/bot/{query}")
-async def mijoo(query: str):
-  answer=cb.get_response(query)
-  return[answer]
-
+__all__ = ["app"]
