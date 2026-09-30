@@ -1,0 +1,26 @@
+[project]
+name = "a-thing-for-fastapi"
+version = "0.2.0"
+description = "FastAPI chat service with a switch for Ollama, Claude, IBM Bob, and Cursor"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115",
+    "httpx>=0.28",
+    "pydantic-settings>=2.6",
+    "uvicorn[standard]>=0.32",
+]
+
+[project.optional-dependencies]
+cursor = ["cursor-sdk"]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
